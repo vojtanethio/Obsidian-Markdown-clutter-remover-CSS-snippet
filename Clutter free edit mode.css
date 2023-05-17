@@ -1,0 +1,42 @@
+/* hides formating */
+.cm-formatting {
+    display: none
+}
+
+/* except list markers */ span.cm-formatting-list,
+/*code block backticks */ span.cm-formatting-code-block.cm-hmd-codeblock,
+/* optionally header hashes */ span.cm-formatting-header
+{ display: inline !important; }
+
+
+/* HEADER bounce against accidental clicking before hashtags */
+span.cm-formatting.cm-formatting-header.cm-formatting-header {
+	opacity: 0;
+	font-size: 1px !important;
+}
+
+
+
+/* ============= HTML opacity for better readability (You need "Style Settings" comunity plugin for this part!) ================================= */
+
+/* @settings
+name: "Pseudo-WYSIWYG"
+id: wysiwyg
+settings:
+    -
+        id: mobile
+        title: Mobile support
+        description: Add the mobile support instead of pc
+        type: class-toggle
+*/
+
+.mobile span.cm-tag.cm-bracket.cm-hmd-html-begin,
+.mobile span.cm-tag,
+.mobile span.cm-tag.cm-bracket,
+.mobile span.cm-tag.cm-bracket.cm-hmd-html-end,
+.mobile span.cm-attribute,
+.mobile span.cm-string {
+    font-size: small;
+    opacity: 0.4
+}
+
